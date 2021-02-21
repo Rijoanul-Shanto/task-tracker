@@ -17,11 +17,15 @@ function App() {
       body: 'Task 3',
     },
   ]);
-  
+
+  const handleTaskDelete = (id) => {
+    console.log('delete...', id);
+  };
+
   return (
     <div className='container'>
       <Header />
-      <Tasks tasks={tasks} />
+      <Tasks tasks={tasks} onDelete={handleTaskDelete} />
     </div>
   );
 }
