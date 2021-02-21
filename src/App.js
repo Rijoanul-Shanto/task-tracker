@@ -19,7 +19,8 @@ function App() {
   ]);
 
   const handleTaskDelete = (id) => {
-    console.log('delete...', id);
+    setTasks(tasks.filter((task) => task.id !== id));
+    console.log(id, 'task deleted...');
   };
 
   return (
