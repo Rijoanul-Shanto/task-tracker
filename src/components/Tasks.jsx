@@ -1,3 +1,5 @@
+import Task from './Task';
+
 const tasks = [
   {
     id: 1,
@@ -15,7 +17,11 @@ const tasks = [
 
 const Tasks = () => {
   return (
-      <div>{tasks.map((task) => (<h3>{task.body}</h3>))}</div>
+    <div>
+      {tasks.map((task) => (
+        <Task key={task.id} task={task} />
+      ))}
+    </div>
   );
 };
 
